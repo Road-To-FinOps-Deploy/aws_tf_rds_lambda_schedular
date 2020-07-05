@@ -12,7 +12,7 @@ import (
 )
 
 // An example of how to test the Terraform module in examples/terraform-aws-example using Terratest.
-func TestTerraformAwsExample(t *testing.T) {
+func TestTerraformAws(t *testing.T) {
 	t.Parallel()
 
 	// Give this lambda function a unique ID for a name so we can distinguish it from any other lambdas
@@ -25,7 +25,7 @@ func TestTerraformAwsExample(t *testing.T) {
 	// website::tag::1::Configure Terraform setting path to Terraform code, EC2 instance name, and AWS Region.
 	terraformOptions := &terraform.Options{
 		// The path to where our Terraform code is located
-		TerraformDir: "../../aws_tf_rds_lambda_scheduler",
+		TerraformDir: "../../aws_tf_rds_lambda_schedular",
 		
 		// Variables to pass to our Terraform code using -var options
 		

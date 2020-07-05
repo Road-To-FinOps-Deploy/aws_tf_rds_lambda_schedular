@@ -36,4 +36,4 @@ Configure your AWS credentials using one of the [supported methods for AWS CLI
 1. Install [Golang](https://golang.org/) and make sure this code is checked out into your `GOPATH`.
 cd test
 go mod init github.com/sg/sch
-go test -v -run TestTerraformAwsExample
+go test -v -run TestTerraformAws
