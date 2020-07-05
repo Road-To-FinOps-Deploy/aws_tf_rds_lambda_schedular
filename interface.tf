@@ -14,7 +14,7 @@ variable "stop_cron" {
 
 variable "function_prefix" {
   description = "Prefix for the name of the resources created"
-  default     = ""
+  default     = "git"
 }
 
 variable "enabled" {
@@ -22,26 +22,23 @@ variable "enabled" {
   description = "Enable that module or not"
 }
 
-locals {
-  module_relpath = ".${replace(path.module, path.cwd , "")}"
-}
-
 variable "rds_tag_key" {
   default     = "rds_lambda_scheduled"
-  type        = "string"
+  type        = string
   description = "the key of the RDS instance and will be an environment value for the lambda function"
 }
 
 variable "rds_tag_value" {
   default     = "onoff"
-  type        = "string"
+  type        = string
   description = "the value of the RDS instance and will be an environment value for the lambda function"
 }
 
 output "rds_tag_key" {
-  value = "${var.rds_tag_key}"
+  value = var.rds_tag_key
 }
 
 output "rds_tag_value" {
-  value = "${var.rds_tag_value}"
+  value = var.rds_tag_value
 }
+
