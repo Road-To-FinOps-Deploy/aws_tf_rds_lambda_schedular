@@ -3,7 +3,7 @@ import logging
 import os
 import sys
 
-TAG_KEY = os.getenv("TAG_KEY", "rds_lambda_scheduled")
+TAG_KEY = os.getenv("TAG_KEY", "nightly")
 TAG_VALUE = os.getenv("TAG_VALUE", "onoff")
 
 rds = boto3.client("rds")

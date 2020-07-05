@@ -138,3 +138,7 @@ Pipfile.lock
 #additional tf files
 plan.tfplan
 terraform.tfstate.d
+
+#terratest
+*.mod 
+*.sum 
